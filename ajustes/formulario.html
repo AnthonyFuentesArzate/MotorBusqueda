@@ -1,0 +1,50 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Formulario</title>
+<link href="styles.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+<!-- formulario de contacto -->
+
+	<form action="envia.php" method="post" class="form-consulta"> 
+		<label>Email del solicitante: <span>*</span>
+			<input type="email" name="email" placeholder="Email" class="campo-form" required>
+		</label>
+
+
+
+		<label>Nombre del Sitio: <span>*</span>
+			<input type="text" name="nombre" placeholder="Nombre" class="campo-form" required>
+		</label>
+		
+		<label>Categoria: <span>*</span>
+			<input type="text" name="categoria" placeholder="Categoria (ej. Hotel,Restaurante, etc.)" class="campo-form" required>
+		</label>
+
+		<label>Telefono: <span>*</span>
+			<input type="text" name="telefono" placeholder="Telefono" class="campo-form" required>
+		</label>
+
+		<label>Direccion: <span>*</span>
+			<input type="text" name="direccion" placeholder="Direccion" class="campo-form" required>
+		</label>
+		
+		<label>Horarios:<span>*</span>
+			<textarea name="horarios" class="campo-form"></textarea>
+		</label>
+<center>
+		<input type="submit" value="Enviar" class="btn-form">
+</center>
+		
+	</form>
+
+<!-- formulario -->
+
+</body>
+</html>

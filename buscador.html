@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<title>Seccion Tamarinda</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300" >
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+body, html {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;;
+  background-color: #FDFEFE;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/coffeehouse.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+#men{
+    max-width: 10%; 
+    height: auto;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  [id*="men"] {
+    max-width: 50%;
+    min-width: 50%; 
+    height: auto;
+  }
+}
+
+#men2{
+    max-width: 20%; 
+    height: auto;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  [id*="men2"] {
+    max-width: 70%;
+    min-width: 70%; 
+    height: auto;
+  }
+}
+
+
+
+
+.vertical-menu {
+  width: auto;
+  min-width: 0;
+  max-width: 700px;
+}
+
+.vertical-menu a {
+  background-color: #FDFEFE;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #FDFEFE;
+}
+
+.vertical-menu a.active {
+  background-color: #FDFEFE;
+  color: black;
+}
+
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+.bd-example {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -15px 0;
+    border-width: .2rem 0 0;
+}
+
+
+
+</style>
+<body>
+       
+
+<!-- Links (sit on top) -->
+<div class="w3-bottom">
+  <div class="w3-row w3-padding " style="background-color: #AEB6BF">
+    <div class="w3-col s3">
+         
+      <a href="index.html" class="w3-button w3-block "><img id="men" src="IMG/ICON/INICIO.png"  ></a>
+    </div>
+    <div class="w3-col s3">
+      <a href="explorar.html" class="w3-button w3-block "><img id="men" src="IMG/ICON/EXPLORAR.png"  ></a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block "><img id="men" src="IMG/ICON/BUSCAR.png"  ></a>
+    </div>
+    <div class="w3-col s3">
+      <a href="ajustes.html" class="w3-button w3-block "><img id="men" src="IMG/ICON/MAS.png"  ></a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Header with image 
+<header class="w3-panel w3-light-gray w3-center w3-opacity" style="padding:1px 1px">
+    <img src="IMG/logo.png" alt="logo" style="width:100;height:100px;">
+  <h1>Seccion Tamarinda</h1>
+
+</header>
+ -->
+
+
+ 
+<!-- Add a background color and large text to the whole page -->
+<div class=" w3-large ">
+
+       
+            
+
+<!-- Contact/Area Container -->
+
+
+          
+
+<!-- End page content -->
+</div>
+
+
+
+<div class="w3-container  w3-large"  style="padding-bottom:32px; padding-top:0px;">
+    <div class="w3-content w3-center" style="max-width:700px">
+      <br>
+          <h1 class="w3-center w3-text-grey"><b>Buscar</b></h1> 
+         
+         
+          <div  style="padding: 0px 25px 10px 25px;">
+            <input id="formulario" class="form-control form-control-lg" type="text" placeholder="Buscar">
+           
+          </div>
+         
+         
+              
+              <button class="w3-button w3-black w3-round w3-padding-large w3-small " id="boton">Buscar</button>
+              <br>
+              <br>
+              
+  
+  
+    </div>
+    <ul id="resultado">
+                
+    </ul>
+
+
+    <script>
+      const productos =[
+        {nombre: 'Bomberos',categoria:'bomberos bombero',url:'explorar/Bomberos/Estacion-Bomberos.html'},
+        {nombre: 'CFE',categoria:'CFE luz ',url:'explorar/CFE/Direcciones/CFE-Oficina.html'},
+        {nombre: 'Ejercito',categoria:'27 Batallon Infanteria ejercito soldados soldado',url:'explorar/Ejercito/27BatallonInfanteria.html'},
+        {nombre: 'Clinica Paris',categoria:'Clínica clinica de Especialidades Paris S.C. hospital doctor hospitales medicos medico',url:'explorar/Hospitales/Direcciones/EspecialidadesParis.html'},
+        {nombre: 'Cruz Roja Delegación Iguala',categoria:'Cruz Roja Delegación delegacion Iguala hospital doctor hospitales medicos medico',url:'explorar/Hospitales/Direcciones/CruzRoja.html'},
+        {nombre: 'Hospital Royal Care',categoria:'Hospital Royal Care hospital doctor hospitales medicos medico',url:'explorar/Hospitales/Direcciones/RoyalCare.html'},
+        {nombre: 'Best Western Gran Plaza',categoria:'Best Western Gran Plaza hotel hoteles motel moteles ',url:'explorar/Hoteles/Direcciones/BestWesternGranPlaza.html'},
+        {nombre: 'Hotel Centenario',categoria:'hotel hoteles motel moteles Hotel Centenario',url:'explorar/Hoteles/Direcciones/HotelCentenario.html'},
+        {nombre: 'Hotel Real 1900',categoria:'Hotel Real 1900 mil novecientos milnovecientos 1000 900 hotel hoteles motel moteles',url:'explorar/Hoteles/Direcciones/Real1900.html'},
+        {nombre: 'Policia',categoria:'Secretaria de Seguridad Publica Municipal policia policias',url:'explorar/Policia/Policia.html'},
+        {nombre: 'Bennoni',categoria:'Bennoni restaurante comida cafeteria pizzeria pizza pizzas',url:'explorar/Restaurantes/Direcciones/Bennoni.html'},
+        {nombre: 'Boca Del Mar',categoria:'Boca Del Mar maricos peces restaurante comida',url:'explorar/Restaurantes/Direcciones/BocaDeMar.html'},
+        {nombre: 'El Taxqueño',categoria:'El Taxqueño restaurante comida ',url:'explorar/Restaurantes/Direcciones/ElTaxqueno.html'},
+        {nombre: 'Radio Taxi Serti',categoria:'Radio Taxi Serti taxis sitio de taxi',url:'explorar/Taxis/Direcciones/Serti.html'},
+        {nombre: 'Radio Taxi TUPI',categoria:'Radio Taxi TUPI taxis sitio de taxi ',url:'explorar/Taxis/Direcciones/Tupi.html'},
+        {nombre: 'Radio Taxi Yohuala',categoria:'Radio Taxi Yohuala taxis sitio de taxi',url:'explorar/Taxis/Direcciones/Yohuala.html'},
+        {nombre: 'ejemplo',categoria:'ejemplo',url:'#ejemplo'},
+        
+
+      ]
+
+
+    const formulario=document.querySelector('#formulario');
+    const boton=document.querySelector('#boton');
+    const resultado=document.querySelector('#resultado');
+
+      const filtrar=()=>{
+        resultado.innerHTML=``;
+        //console.log(formulario.value);
+        const texto= formulario.value.toLowerCase();
+        for(let producto of productos){
+          let nombre=producto.nombre.toLowerCase();
+          let categoria=producto.categoria.toLowerCase();
+
+          if(formulario.value.length == 0){
+            resultado.innerHTML += `
+            <li style=" list-style-type: none;">Lugar no encontrado</li>
+            <br>
+
+            `
+            { break; }
+              
+          }
+
+
+          if(nombre.indexOf(texto) !== -1){
+            resultado.innerHTML += `
+            <li style=" list-style-type: none;"><a href="${producto.url}">${producto.nombre}</a></li>
+            <br>
+            `
+          }else{
+            if(categoria.indexOf(texto) !== -1){
+            resultado.innerHTML += `
+            <li style=" list-style-type: none;"><a href="${producto.url}">${producto.nombre}</a></li>
+            <br>
+            `
+          }
+          }
+        }
+
+        if(resultado.innerHTML === ''){
+            resultado.innerHTML += `
+            <li style=" list-style-type: none;">Lugar no encontrado</li>
+            <br>
+            `
+          }
+
+      }
+
+      boton.addEventListener('click',filtrar);
+
+
+
+    </script>
+  </div>
+
+
+<!-- Footer -->
+
+
+
+
+</body>
+</html>
